@@ -3,7 +3,7 @@
 #include "methods.h"
 
 int main(int argc, char *argv[]){
-	int pop = 25, size = 64, i, numBest = 5;
+	int pop = 25, size = 900, i, numBest = 5;
 	double mutationRate;
 	int numGenerations;
 	char** population;
@@ -36,7 +36,7 @@ int main(int argc, char *argv[]){
 
 	printf("\n\n");
 
-
+	//runs fo numGenerations generations
 	for(i = 0; i<numGenerations; i++){
 		testGeneration(pop, size, population, best, numBest);
 		newGeneration(pop, size, &population, best, numBest, mutationRate);

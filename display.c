@@ -2,8 +2,8 @@
 #include "methods.h"
 
 int main(int argc, char *argv[]){
-	int pop = 25, size = 64;
-	char creature[64];
+	int pop = 25, size = 900;
+	char creature[900];
 	FILE *f1 = fopen("creatures.txt", "r+");
 	if (argc != 2) {/*makes sure number of arguments is correct*/
     	printf("Error, usage: wrong number of arguments. Expected 2. Generations | Mutation Rate\n");

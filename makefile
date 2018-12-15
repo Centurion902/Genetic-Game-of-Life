@@ -2,25 +2,14 @@ All: initialization train display
 
 
 
-initialization: methods.o initialization.o
-	gcc -std=c99 -Wall -ansi -pedantic initialization.o methods.o -o initialization
+initialization: methods.c initialization.c methods.h
+	gcc -Wall -std=c99 -pedantic initialization.c methods.c -Iinclude -o initialization
 
-train: methods.o train.o
-	gcc -std=c99 -Wall -ansi -pedantic train.o methods.o -o train
+train: methods.c train.c methods.h
+	gcc -Wall -std=c99 -pedantic train.c methods.c -Iinclude -o train
 
-display: methods.o display.o
-	gcc -std=c99 -Wall -ansi -pedantic display.o methods.o -o display
+display: methods.c display.c methods.h
+	gcc -Wall -std=c99 -pedantic display.c methods.c -Iinclude -o display
 
 
 
-display.o: display.c
-	gcc -std=c99 -Wall -ansi -pedantic -c display.c -o display.o
-
-train.o: train.c
-	gcc -std=c99 -Wall -ansi -pedantic -c train.c -o train.o	
-
-initialization.o: initialization.c
-	gcc -std=c99 -Wall -ansi -pedantic -c initialization.c -o initialization.o
-
-methods.o: methods.c methods.h
-	gcc -std=c99 -Wall -ansi -pedantic -c methods.c -o methods.o -lm
