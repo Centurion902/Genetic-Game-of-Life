@@ -318,8 +318,8 @@ int testCreature(int size, char* creature, int print){
 			}
 
 		}//reward calculated based on how close the creature is to size 2000
-		score += 1000*1000-(abs(numLiving-1000)*abs(numLiving-1000));
-		if(numLiving == 0 || numLiving > 3500){
+		score += 100*100-(abs(numLiving-100)*abs(numLiving-100));
+		if(numLiving == 0){
 			score = 0;
 		}
 		
